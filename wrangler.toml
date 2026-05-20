@@ -1,0 +1,7 @@
+name = "holdingmusic"
+compatibility_date = "2026-05-20"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "WAITLIST"
+id = "6abf03c0154e40378d08d15f3d5ecece"
