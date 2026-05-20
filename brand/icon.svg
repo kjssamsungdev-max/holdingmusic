@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="HoldingMusic icon">
+  <title>HoldingMusic</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0908"/>
+      <stop offset="100%" stop-color="#14121A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#D4FF3A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#D4FF3A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <g transform="translate(64,80) scale(6)">
+    <path d="M 8 38 Q 32 4 56 38" stroke="#D4FF3A" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <circle cx="32" cy="52" r="8" fill="#D4FF3A"/>
+  </g>
+</svg>

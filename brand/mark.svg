@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="HoldingMusic mark">
+  <title>HoldingMusic</title>
+  <desc>Fermata — the musical notation for "hold this note." An arc above a sustained tone.</desc>
+  <path d="M 8 38 Q 32 4 56 38" stroke="currentColor" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <circle cx="32" cy="52" r="8" fill="currentColor"/>
+</svg>

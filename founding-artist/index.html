@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="HoldingMusic Founding Artists — 1,000 spots only. From Suno, Udio, ElevenLabs Music and the wider AI music community. Free upload, all rights yours, transparent Trail Clause, Artist Fund payouts." />
+<meta name="theme-color" content="#0A0908" />
+<meta property="og:title" content="HoldingMusic — Founding Artist · 1 of 1,000" />
+<meta property="og:description" content="The first 1,000 AI artists to upload define what this platform becomes. Open now to the Suno, Udio, ElevenLabs, Mubert, Soundraw, AIVA, Mureka and Beatoven communities." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+<link rel="apple-touch-icon" href="/brand/icon.svg" />
+<title>Founding Artist · 1 of 1,000 — HoldingMusic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0A0908;
+    --bg-elev: #161413;
+    --bg-line: #2A2724;
+    --ink: #F5F2EC;
+    --ink-soft: #A19B92;
+    --ink-faint: #6B655D;
+    --accent: #D4FF3A;
+    --accent-warm: #FF6B35;
+    --danger: #FF4D6D;
+    --display: "Fraunces", "Times New Roman", serif;
+    --body: "Newsreader", Georgia, serif;
+    --mono: "JetBrains Mono", "Courier New", monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 720px) { .wrap { padding: 0 20px; } }
+
+  .spec {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .spec-accent { color: var(--accent); }
+
+  /* Top nav */
+  nav.top {
+    border-bottom: 1px solid var(--bg-line);
+    padding: 20px 0;
+    background: rgba(10, 9, 8, 0.92);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav.top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 16px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  nav.top a.back {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  nav.top a.back:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+  }
+  @media (max-width: 720px) { .hero { padding: 48px 0 40px; } }
+
+  .hero-eyebrow {
+    margin-bottom: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+  .hero-eyebrow-dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .big-num {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(120px, 18vw, 240px);
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    margin-bottom: 24px;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .big-num .of {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 0.5em;
+    vertical-align: super;
+    margin: 0 0.15em;
+  }
+  .big-num .thou {
+    color: var(--ink-soft);
+  }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 18ch;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--ink);
+  }
+
+  .hero p.lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+
+  /* Live counter */
+  .counter-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 32px;
+    border: 1px solid var(--bg-line);
+    background: var(--bg-elev);
+  }
+  .counter-num {
+    font-family: var(--display);
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+  }
+  .counter-bar {
+    height: 4px;
+    width: 200px;
+    background: var(--bg-line);
+    position: relative;
+    overflow: hidden;
+  }
+  .counter-bar-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--accent);
+    transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    width: 0%;
+  }
+  .counter-lbl {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  @media (max-width: 720px) {
+    .counter-card { flex-direction: column; gap: 12px; padding: 18px 24px; }
+    .counter-bar { width: 160px; }
+  }
+
+  /* Section base */
+  section.std { padding: 72px 0; border-top: 1px solid var(--bg-line); }
+  @media (max-width: 720px) { section.std { padding: 48px 0; } }
+
+  .section-title {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    font-variation-settings: "opsz" 80;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .section-sub {
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin-bottom: 40px;
+    max-width: 640px;
+  }
+
+  /* Communities row */
+  .communities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .comm-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 10px 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--bg-line);
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .comm-tag .check { color: var(--accent); margin-right: 8px; }
+
+  /* Benefit grid */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 720px) { .benefits { grid-template-columns: 1fr; } }
+
+  .benefit {
+    padding: 28px;
+    border: 1px solid var(--bg-line);
+    background: var(--bg-elev);
+    position: relative;
+  }
+  .benefit-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit h3 {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+  .benefit p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* Honest disclosure panel */
+  .honest {
+    border: 1px solid var(--accent);
+    background: linear-gradient(135deg, var(--bg-elev), rgba(212, 255, 58, 0.04));
+    padding: 40px;
+  }
+  @media (max-width: 720px) { .honest { padding: 28px; } }
+  .honest-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .honest h3 {
+    font-family: var(--display);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .honest h3 em { font-style: italic; color: var(--accent); }
+  .honest ul { list-style: none; padding: 0; }
+  .honest li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--bg-line);
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    align-items: baseline;
+  }
+  .honest li:last-child { border-bottom: none; }
+  .honest .num {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+  .honest .desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .honest .desc strong { color: var(--ink); font-weight: 500; }
+
+  /* Form */
+  .form-card {
+    border: 1px solid var(--accent);
+    background: var(--bg);
+    padding: 48px;
+    box-shadow: 0 0 60px rgba(212, 255, 58, 0.05);
+  }
+  @media (max-width: 720px) { .form-card { padding: 28px; } }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 720px) { .form-grid { grid-template-columns: 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field.full { grid-column: 1 / -1; }
+
+  .field-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .field-label.req::after {
+    content: " *";
+    color: var(--accent);
+  }
+
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg-elev);
+    border: 1px solid var(--bg-line);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    border-radius: 0;
+    transition: border-color 0.2s ease;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23D4FF3A' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 44px;
+  }
+
+  /* Honeypot — visually hidden but available to bots */
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px; height: 1px;
+    opacity: 0;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .checkbox-row input { width: 18px; height: 18px; accent-color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+  .checkbox-row span { font-size: 14px; color: var(--ink-soft); }
+
+  .submit {
+    margin-top: 28px;
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .submit:hover:not(:disabled) {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+  .submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  /* Form states */
+  .form-msg {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid var(--bg-line);
+    background: var(--bg-elev);
+    display: none;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .form-msg.show { display: block; }
+  .form-msg.success { border-color: var(--accent); color: var(--accent); }
+  .form-msg.error { border-color: var(--danger); color: var(--danger); }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 28px;
+    border-top: 1px solid var(--bg-line);
+    margin-top: 32px;
+  }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .legal {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+  }
+
+  /* Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  ::selection { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      HoldingMusic
+    </a>
+    <a href="/" class="back">← Back to main</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+      <span class="spec spec-accent">Founding Artist · Limited to 1,000</span>
+    </div>
+
+    <div class="big-num" aria-label="One of one thousand">
+      1<span class="of">of</span><span class="thou">1,000</span>
+    </div>
+
+    <h1>The first thousand artists define what this platform becomes.</h1>
+
+    <p class="lead">
+      Open now to the AI music community — Suno, Udio, ElevenLabs Music, Mubert, Soundraw, AIVA, Mureka, Beatoven, and every Discord and subreddit in between. The cap is real. After 1,000, the doors close until public launch.
+    </p>
+
+    <div class="counter-card" id="counter">
+      <div>
+        <div class="counter-num"><span id="counter-num">—</span></div>
+        <div class="counter-lbl">Claimed of 1,000</div>
+      </div>
+      <div>
+        <div class="counter-bar"><div class="counter-bar-fill" id="counter-fill"></div></div>
+        <div class="counter-lbl" id="counter-status">Founding tier open</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES -->
+<section class="std reveal">
+  <div class="wrap">
+    <div class="spec spec-accent">§ Who this is for</div>
+    <h2 class="section-title">If you've ever generated a track and wondered where it should <em>actually go.</em></h2>
+    <p class="section-sub">
+      The Founding cohort is open to anyone making AI music — whether through a flagship platform, an open-source model, or a custom pipeline. Bring your tracks. Keep your rights. Get heard.
+    </p>
+
+    <div class="communities">
+      <div class="comm-tag"><span class="check">✓</span>Suno</div>
+      <div class="comm-tag"><span class="check">✓</span>Udio</div>
+      <div class="comm-tag"><span class="check">✓</span>ElevenLabs Music</div>
+      <div class="comm-tag"><span class="check">✓</span>Mubert</div>
+      <div class="comm-tag"><span class="check">✓</span>Soundraw</div>
+      <div class="comm-tag"><span class="check">✓</span>AIVA</div>
+      <div class="comm-tag"><span class="check">✓</span>Mureka</div>
+      <div class="comm-tag"><span class="check">✓</span>Beatoven</div>
+      <div class="comm-tag"><span class="check">✓</span>Loudly</div>
+      <div class="comm-tag"><span class="check">✓</span>Soundverse</div>
+      <div class="comm-tag"><span class="check">✓</span>r/SunoAI</div>
+      <div class="comm-tag"><span class="check">✓</span>r/AImusicgenerator</div>
+      <div class="comm-tag"><span class="check">✓</span>r/UdioMusic</div>
+      <div class="comm-tag"><span class="check">✓</span>Custom / open-source</div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="std reveal">
+  <div class="wrap">
+    <div class="spec spec-accent">§ What you get</div>
+    <h2 class="section-title">Founding Artist status is <em>permanent.</em></h2>
+    <p class="section-sub">
+      These benefits never expire. Lose your password, change your stage name, take a year off — you remain a Founding Artist of HoldingMusic for the life of the platform.
+    </p>
+
+    <div class="benefits">
+      <article class="benefit">
+        <div class="benefit-num">01 / Identity</div>
+        <h3>Founding Artist badge</h3>
+        <p>A permanent badge on your artist profile and every track page. Visible to venues, listeners, producers, and labels. We will never issue this badge again after the first 1,000 spots are filled.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-num">02 / Money</div>
+        <h3>Priority in the Artist Fund</h3>
+        <p>For the entire first year of platform operation, Founding Artists receive priority weighting in the New Voices bucket. 15% of net platform profit is paid out to artists quarterly across three buckets.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-num">03 / Access</div>
+        <h3>First access, dripped weekly</h3>
+        <p>We onboard 50 Founding Artists per week so the leaderboards stay meaningful and quality holds. Earlier spots get earlier exposure and earlier leaderboard runway.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-num">04 / Voice</div>
+        <h3>Private Founders' Discord</h3>
+        <p>Direct line to the build team. Vote on leaderboard formula changes, feedback on new features, first look at major decisions. The platform's direction is set with you, not for you.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-num">05 / Press</div>
+        <h3>Named in the launch press release</h3>
+        <p>If you opt in below, your artist name appears in the public launch press release sent to Music Business Worldwide, MusicTech, Billboard, and major SEA outlets. Free press, by name, on day one.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-num">06 / Forever</div>
+        <h3>Free upload, no cap, no expiry</h3>
+        <p>You will never pay HoldingMusic to upload, host, or stream your tracks. This is the standard policy for all artists — but for Founding Artists it is contractually guaranteed for the life of the platform.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST DISCLOSURE -->
+<section class="std reveal">
+  <div class="wrap">
+    <div class="spec spec-accent">§ The whole deal</div>
+    <h2 class="section-title">Read this <em>before</em> you sign up.</h2>
+    <p class="section-sub">
+      We are not a label. We are a discovery platform. Here is exactly what you are agreeing to when you join — no fine print, no surprises. The full Terms of Service will be available before any upload, drafted by music industry attorneys for jurisdiction across PH, US, EU, UK.
+    </p>
+
+    <div class="honest">
+      <div class="honest-tag">The Trail Clause · The two numbers you need to know</div>
+      <h3>If discovery here turns into a real deal, <em>we take 2%.</em> That's it.</h3>
+      <ul>
+        <li>
+          <div class="num">2%</div>
+          <div class="desc"><strong>Finder's fee on signed deals.</strong> If a producer, label, or sync agency signs you within 24 months of your track appearing on any HoldingMusic leaderboard (Global, Country, City, Genre, or Rising Star), we receive 2% of that deal's total value. One-time. For reference: a manager takes 10–20%. A sync broker takes 30–50%.</div>
+        </li>
+        <li>
+          <div class="num">0.5%</div>
+          <div class="desc"><strong>Post-removal royalty.</strong> If you pull a track <em>after</em> it has appeared on a leaderboard, we retain 0.5% of net revenue from that specific track, for the lesser of 7 years or your first signed commercial deal involving the track. Producer points are 1–5%; this is below the floor.</div>
+        </li>
+        <li>
+          <div class="num">0%</div>
+          <div class="desc"><strong>Catalog ownership.</strong> We never own your music. You keep 100% of your rights, masters, publishing, sync, mechanical — everything. We're a discovery channel, not a label. Walk away any time.</div>
+        </li>
+        <li>
+          <div class="num">15%</div>
+          <div class="desc"><strong>Of net platform profit returns to artists.</strong> Paid quarterly. Auditable. Public formula. No other AI music platform on Earth pays artists cash for real-world venue plays. We're the only one.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- THE FORM -->
+<section class="std reveal" id="claim">
+  <div class="wrap">
+    <div class="spec spec-accent">§ Claim your spot</div>
+    <h2 class="section-title">One of one thousand. <em>This is yours.</em></h2>
+    <p class="section-sub">
+      Email is the only required field. Everything else helps us prepare your onboarding and ensure your community is represented in the launch press. We will email you when your slot opens (one of fifty per week, in order of signup).
+    </p>
+
+    <div class="form-card">
+      <form id="claim-form" novalidate>
+        <!-- Honeypot -->
+        <div class="hp" aria-hidden="true">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label class="field-label req" for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@somewhere.com" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="platform">Primary AI music platform</label>
+            <select id="platform" name="platform">
+              <option value="">Select one (optional)</option>
+              <option value="suno">Suno</option>
+              <option value="udio">Udio</option>
+              <option value="elevenlabs">ElevenLabs Music</option>
+              <option value="mubert">Mubert</option>
+              <option value="soundraw">Soundraw</option>
+              <option value="aiva">AIVA</option>
+              <option value="mureka">Mureka</option>
+              <option value="beatoven">Beatoven</option>
+              <option value="loudly">Loudly</option>
+              <option value="soundverse">Soundverse</option>
+              <option value="multiple">Multiple platforms</option>
+              <option value="custom">Custom / open-source</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="handle">Artist name or handle</label>
+            <input type="text" id="handle" name="handle" autocomplete="nickname" placeholder="How you're known" maxlength="80" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="tracks">Roughly how many tracks ready?</label>
+            <select id="tracks" name="tracks">
+              <option value="">Select range (optional)</option>
+              <option value="1-5">1–5</option>
+              <option value="6-20">6–20</option>
+              <option value="21-50">21–50</option>
+              <option value="51-100">51–100</option>
+              <option value="100+">100+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="community">Where did you hear about us?</label>
+            <input type="text" id="community" name="community" placeholder="r/SunoAI, Discord, friend, etc." maxlength="120" />
+          </div>
+
+          <div class="field full">
+            <label class="checkbox-row">
+              <input type="checkbox" id="press" name="press" value="yes" />
+              <span>I'm happy to be named in the launch press release sent to Music Business Worldwide, MusicTech, Billboard and other outlets. (Optional. You can change your mind any time before launch by emailing us.)</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit" id="submit-btn">Claim my founding spot →</button>
+
+        <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="/" class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      HoldingMusic
+    </a>
+    <div class="legal">© 2026 Artisans F&amp;B Corp · Built in Palawan</div>
+  </div>
+</footer>
+
+<script>
+  // NASA P10-aligned: no globals, bounded loops, validated lookups, all return paths handled.
+  (function init() {
+    'use strict';
+
+    var MAX_ELEMENTS = 200;
+    var EMAIL_MAX = 254;
+    var NAME_MAX = 80;
+    var COMMUNITY_MAX = 120;
+    var COUNTER_TARGET = 1000;
+    var COUNTER_ENDPOINT = '/api/founding-count';
+    var SUBMIT_ENDPOINT = '/api/founding-artist';
+
+    function safeQueryAll(selector) {
+      if (typeof selector !== 'string' || selector.length === 0) return [];
+      var result = document.querySelectorAll(selector);
+      return result === null ? [] : Array.from(result).slice(0, MAX_ELEMENTS);
+    }
+
+    function isValidEmail(value) {
+      if (typeof value !== 'string') return false;
+      if (value.length === 0 || value.length > EMAIL_MAX) return false;
+      // Pragmatic email regex; server-side validation is the real gate.
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function setupRevealObserver() {
+      if (!('IntersectionObserver' in window)) {
+        var fb = safeQueryAll('.reveal');
+        for (var i = 0; i < fb.length && i < MAX_ELEMENTS; i++) {
+          fb[i].classList.add('in');
+        }
+        return null;
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        var len = Math.min(entries.length, MAX_ELEMENTS);
+        for (var i = 0; i < len; i++) {
+          var entry = entries[i];
+          if (entry && entry.isIntersecting && entry.target) {
+            entry.target.classList.add('in');
+            obs.unobserve(entry.target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+      var targets = safeQueryAll('.reveal');
+      for (var j = 0; j < targets.length && j < MAX_ELEMENTS; j++) {
+        obs.observe(targets[j]);
+      }
+      return obs;
+    }
+
+    function updateCounterUI(count) {
+      if (typeof count !== 'number' || count < 0) count = 0;
+      if (count > COUNTER_TARGET) count = COUNTER_TARGET;
+
+      var numEl = document.getElementById('counter-num');
+      var fillEl = document.getElementById('counter-fill');
+      var statusEl = document.getElementById('counter-status');
+
+      if (numEl !== null) numEl.textContent = count.toString();
+      if (fillEl !== null) {
+        var pct = (count / COUNTER_TARGET) * 100;
+        fillEl.style.width = pct.toFixed(1) + '%';
+      }
+      if (statusEl !== null) {
+        if (count === 0) statusEl.textContent = 'Founding tier open';
+        else if (count < 100) statusEl.textContent = 'Early wave · plenty of runway';
+        else if (count < 500) statusEl.textContent = 'Filling steadily';
+        else if (count < 900) statusEl.textContent = 'More than half claimed';
+        else if (count < COUNTER_TARGET) statusEl.textContent = 'Final 100 — apply now';
+        else statusEl.textContent = 'Founding cohort full — public waitlist only';
+      }
+    }
+
+    function fetchCounter() {
+      if (typeof fetch !== 'function') {
+        updateCounterUI(0);
+        return;
+      }
+      fetch(COUNTER_ENDPOINT, { method: 'GET', credentials: 'same-origin' })
+        .then(function (res) {
+          if (res === null || !res.ok) return { count: 0 };
+          return res.json();
+        })
+        .then(function (data) {
+          var c = (data && typeof data.count === 'number') ? data.count : 0;
+          updateCounterUI(c);
+        })
+        .catch(function () {
+          updateCounterUI(0);
+        });
+    }
+
+    function readForm(form) {
+      if (form === null) return null;
+      var payload = {
+        email: (form.elements.email && form.elements.email.value || '').trim().slice(0, EMAIL_MAX),
+        platform: (form.elements.platform && form.elements.platform.value || '').slice(0, 40),
+        handle: (form.elements.handle && form.elements.handle.value || '').trim().slice(0, NAME_MAX),
+        tracks: (form.elements.tracks && form.elements.tracks.value || '').slice(0, 20),
+        community: (form.elements.community && form.elements.community.value || '').trim().slice(0, COMMUNITY_MAX),
+        press: (form.elements.press && form.elements.press.checked) ? 'yes' : 'no',
+        hp: (form.elements.website && form.elements.website.value || '').trim()
+      };
+      return payload;
+    }
+
+    function showMsg(text, kind) {
+      var msg = document.getElementById('form-msg');
+      if (msg === null) return;
+      msg.textContent = text;
+      msg.className = 'form-msg show ' + (kind === 'success' ? 'success' : 'error');
+    }
+
+    function setupForm() {
+      var form = document.getElementById('claim-form');
+      var btn = document.getElementById('submit-btn');
+      if (form === null || btn === null) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var payload = readForm(form);
+        if (payload === null) return;
+
+        // Honeypot: silent reject
+        if (payload.hp.length > 0) {
+          showMsg('Thanks — you\'re on the list.', 'success');
+          return;
+        }
+
+        if (!isValidEmail(payload.email)) {
+          showMsg('Please enter a valid email so we can notify you when your slot opens.', 'error');
+          return;
+        }
+
+        btn.disabled = true;
+        var originalLabel = btn.textContent;
+        btn.textContent = 'Claiming…';
+
+        if (typeof fetch !== 'function') {
+          showMsg('Your browser does not support fetch. Please email founding@holdingmusic.com directly.', 'error');
+          btn.disabled = false;
+          btn.textContent = originalLabel;
+          return;
+        }
+
+        delete payload.hp; // do not transmit honeypot field
+
+        fetch(SUBMIT_ENDPOINT, {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(function (res) {
+            if (res === null) throw new Error('null response');
+            if (res.status === 409) {
+              return res.json().then(function (data) {
+                throw new Error(data && data.error ? data.error : 'already_claimed');
+              });
+            }
+            if (!res.ok) {
+              return res.json().then(function (data) {
+                throw new Error(data && data.error ? data.error : 'submission_failed');
+              }).catch(function () { throw new Error('submission_failed'); });
+            }
+            return res.json();
+          })
+          .then(function (data) {
+            var position = data && typeof data.position === 'number' ? data.position : null;
+            var line = position !== null
+              ? 'You\'re founding artist #' + position + ' of 1,000. We\'ll email when your slot opens.'
+              : 'You\'re on the founding list. We\'ll email when your slot opens.';
+            showMsg(line, 'success');
+            form.reset();
+            fetchCounter();
+          })
+          .catch(function (err) {
+            var emsg = err && err.message ? err.message : 'submission_failed';
+            if (emsg === 'already_claimed') {
+              showMsg('This email is already on the founding list. We have you.', 'success');
+            } else if (emsg === 'cohort_full') {
+              showMsg('The founding cohort is full. You\'ve been added to the public waitlist instead.', 'success');
+            } else {
+              showMsg('Something went wrong. Please try again, or email founding@holdingmusic.com.', 'error');
+            }
+          })
+          .then(function () {
+            btn.disabled = false;
+            btn.textContent = originalLabel;
+          });
+      }, { passive: false });
+    }
+
+    function boot() {
+      setupRevealObserver();
+      setupForm();
+      fetchCounter();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', boot, { once: true });
+    } else {
+      boot();
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" fill="none" role="img" aria-label="HoldingMusic">
+  <title>HoldingMusic</title>
+  <desc>Full logo lockup: fermata mark followed by HoldingMusic wordmark.</desc>
+  <g transform="translate(0,0)">
+    <path d="M 8 38 Q 32 4 56 38" stroke="currentColor" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <circle cx="32" cy="52" r="8" fill="currentColor"/>
+  </g>
+  <text x="80" y="46"
+        font-family="'Fraunces', Georgia, serif"
+        font-weight="600"
+        font-size="40"
+        letter-spacing="-1.2"
+        fill="currentColor">HoldingMusic</text>
+</svg>
