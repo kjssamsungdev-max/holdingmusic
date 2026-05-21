@@ -7,6 +7,7 @@ const MAX_NAME = 80;
 const MAX_COMMUNITY = 120;
 const MAX_PLATFORM = 40;
 const MAX_TRACKS = 20;
+const MAX_TURNSTILE_TOKEN = 2048;
 const COHORT_CAP = 1000;
 
 const ALLOWED_PLATFORMS = new Set([
@@ -71,6 +72,24 @@ function sanitizePayload(raw) {
   };
 }
 
+async function verifyTurnstile(token, secret, ip) {
+  if (typeof token !== 'string') return false;
+  if (token.length === 0 || token.length > MAX_TURNSTILE_TOKEN) return false;
+  if (typeof secret !== 'string' || secret.length === 0) return false;
+  const form = new FormData();
+  form.append('secret', secret);
+  form.append('response', token);
+  if (typeof ip === 'string' && ip.length > 0) form.append('remoteip', ip);
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body: form,
+  });
+  if (res === null || !res.ok) return false;
+  const data = await res.json();
+  if (data === null || typeof data !== 'object') return false;
+  return data.success === true;
+}
+
 async function countArtistKeys(kv) {
   if (kv === null || typeof kv.list !== 'function') return 0;
   let cursor = undefined;
@@ -110,6 +129,15 @@ async function handleSubmission(context) {
   const clean = sanitizePayload(body);
   if (clean === null) {
     return jsonResponse({ error: 'invalid_input' }, 400);
+  }
+
+  const turnstileSecret = env && typeof env.TURNSTILE_SECRET_KEY === 'string' ? env.TURNSTILE_SECRET_KEY : '';
+  if (turnstileSecret.length > 0) {
+    const ip = context.request.headers.get('CF-Connecting-IP') || '';
+    const verified = await verifyTurnstile(body.turnstile, turnstileSecret, ip);
+    if (!verified) {
+      return jsonResponse({ error: 'turnstile_failed' }, 400);
+    }
   }
 
   const existing = await readExisting(kv, clean.email);

@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   :root {
     --bg: #0A0908;
@@ -721,6 +722,9 @@
         <button type="submit" class="submit" id="submit-btn">Claim my founding spot →</button>
 
         <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+          <div style="margin: 24px 0 12px;">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADTeLEaSJwyp_nF2" data-theme="dark"></div>
+          </div>
       </form>
     </div>
   </div>
@@ -885,6 +889,15 @@
 
         delete payload.hp; // do not transmit honeypot field
 
+        var ts = document.querySelector('input[name="cf-turnstile-response"]');
+        payload.turnstile = ts === null ? '' : ts.value;
+        if (payload.turnstile.length === 0) {
+          showMsg('Please complete the verification challenge.', 'error');
+          btn.disabled = false;
+          btn.textContent = originalLabel;
+          return;
+        }
+
         fetch(SUBMIT_ENDPOINT, {
           method: 'POST',
           credentials: 'same-origin',
@@ -922,6 +935,7 @@
               showMsg('The founding cohort is full. You\'ve been added to the public waitlist instead.', 'success');
             } else {
               showMsg('Something went wrong. Please try again, or email founding@holdingmusic.com.', 'error');
+            if (window.turnstile && typeof window.turnstile.reset === 'function') { window.turnstile.reset(); }
             }
           })
           .then(function () {
